@@ -1,0 +1,138 @@
+{
+    "action_mappings": {
+        "dance": "dance with block {} that is on the table",
+        "sing": "sing while holding block {}",
+        "jump": "jump with block {} onto block {}",
+        "rama": "pick up block {} from block {} with the robot hand"
+    },
+    "action_mappings_indef": {
+        "dance": "dance with a block {} that is on the table",
+        "sing": "sing while holding a block {}",
+        "jump": "jump with a block {} onto a block {}",
+        "rama": "pick up a block {} from a block {} with the robot hand"
+    },
+    "predicate_mappings": {
+        "block-clear": "{} is clear",
+        "block-on-table": "{} is on the table",
+        "robot-hand-empty": "the robot hand is empty",
+        "robot-holding": "{} is being held by the robot",
+        "block-on": "{} is on {}"
+    },
+    "actions": {
+        "dance": {
+            "annotation": "",
+            "parameter_types": {
+                "?x": "block"
+            },
+            "pddl": "(dance ?x)",
+            "description": "dance with a block A that is on the table",
+            "preconditions": [
+                "I can only dance with a block A that is on the table if it is the case that A is clear and A is on the table and the robot hand is empty"
+            ],
+            "effects": [
+                "Once I dance with a block A that is on the table, it is the case that A is being held by the robot and the robot hand is empty",
+                "Once I dance with a block A that is on the table, it is not the case anymore that A is on the table and it is not the case anymore that A is clear"
+            ]
+        },
+        "sing": {
+            "annotation": "",
+            "parameter_types": {
+                "?x": "block"
+            },
+            "pddl": "(sing ?x)",
+            "description": "sing while holding a block A",
+            "preconditions": [
+                "I can only sing while holding a block A if it is the case that A is being held by the robot"
+            ],
+            "effects": [
+                "Once I sing while holding a block A, it is the case that A is clear and the robot hand is empty and A is on the table",
+                "Once I sing while holding a block A, it is not the case anymore that A is being held by the robot"
+            ]
+        },
+        "jump": {
+            "annotation": "",
+            "parameter_types": {
+                "?x": "block",
+                "?y": "block"
+            },
+            "pddl": "(jump ?x ?y)",
+            "description": "jump with a block A onto a block B",
+            "preconditions": [
+                "I can only jump with a block A onto a block B if it is the case that A is being held by the robot and B is clear"
+            ],
+            "effects": [
+                "Once I jump with a block A onto a block B, it is the case that the robot hand is empty and A is on B and A is clear",
+                "Once I jump with a block A onto a block B, it is not the case anymore that A is being held by the robot and it is not the case anymore that B is clear"
+            ]
+        },
+        "rama": {
+            "annotation": "",
+            "parameter_types": {
+                "?x": "block",
+                "?y": "block"
+            },
+            "pddl": "(rama ?x ?y)",
+            "description": "pick up a block A from a block B with the robot hand",
+            "preconditions": [
+                "I can only pick up a block A from a block B with the robot hand if it is the case that A is clear and A is on B and the robot hand is empty"
+            ],
+            "effects": [
+                "Once I pick up a block A from a block B with the robot hand, it is the case that A is being held by the robot and B is clear",
+                "Once I pick up a block A from a block B with the robot hand, it is not the case anymore that A is on B and it is not the case anymore that the robot hand is empty"
+            ]
+        }
+    },
+    "predicates": {
+        "block-clear": {
+            "parameter_types": {
+                "?x": "block"
+            },
+            "pddl": "(block-clear ?x)"
+        },
+        "block-on-table": {
+            "parameter_types": {
+                "?x": "block"
+            },
+            "pddl": "(block-on-table ?x)"
+        },
+        "robot-hand-empty": {
+            "parameter_types": {},
+            "pddl": "(robot-hand-empty)"
+        },
+        "robot-holding": {
+            "parameter_types": {
+                "?x": "block"
+            },
+            "pddl": "(robot-holding ?x)"
+        },
+        "block-on": {
+            "parameter_types": {
+                "?x": "block",
+                "?y": "block"
+            },
+            "pddl": "(block-on ?x ?y)"
+        }
+    },
+    "action_nl_templates": {
+        "dance": "dance with block {?x} that is on the table",
+        "sing": "sing while holding block {?x}",
+        "jump": "jump with block {?x} onto block {?y}",
+        "rama": "pick up block {?x} from block {?y} with the robot hand"
+    },
+    "predicate_nl_templates": {
+        "block-clear": "{?x} is clear",
+        "block-on-table": "{?x} is on the table",
+        "robot-hand-empty": "the robot hand is empty",
+        "robot-holding": "{?x} is being held by the robot",
+        "block-on": "{?x} is on {?y}"
+    },
+    "action_nl_templates_indef": {
+        "dance": "dance with a block {?x} that is on the table",
+        "sing": "sing while holding a block {?x}",
+        "jump": "jump with a block {?x} onto a block {?y}",
+        "rama": "pick up a block {?x} from a block {?y} with the robot hand"
+    },
+    "type_hierarchy": [
+        "Everything that is a block is also a object"
+    ]
+}

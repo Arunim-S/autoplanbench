@@ -1,0 +1,12 @@
+{
+    "prefixes": {
+        "input": "",
+        "output": ""
+    },
+    "pos_examples": [
+        [
+            "My goal is that in the end object_1 is on object_0, object_3 is on object_2\nI: My current initial situation is as follows: \nThere are 4 objects: object_0, object_1, object_2, object_3\nCurrently, object_0 is on the table, object_1 is on object_0, object_2 is clear, object_2 is on object_1, object_3 is clear, object_3 is on the table, the hand is empty\nYou: pick up object object_3 from the table with an empty hand\nI: I pick up object object_3 from the table with an empty hand.\nYou: Now, stack object object_3 on object object_2\nI: I stack object object_3 on object object_2.\nYou: You're finished\nI: Great!",
+            ""
+        ]
+    ]
+}

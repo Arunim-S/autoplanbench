@@ -1,0 +1,68 @@
+{
+    "llm_config": {
+        "plan": {
+            "model_name": "openai_chat",
+            "model_path": "GPT4-Turbo-Norway",
+            "examples_chat": false,
+            "prompt_file": "./llm_planning/prompt_templates/planning_template_non_interactive.txt",
+            "temp": 0,
+            "max_tokens": null,
+            "max_history": null,
+            "caching": "default"
+        },
+        "translate": {
+            "model_name": "openai_chat",
+            "model_path": "GPT4-Turbo-Norway",
+            "examples_chat": false,
+            "prompt_file": "./llm_planning/prompt_templates/translation_template.txt",
+            "examples_file": "/home/arunim/Desktop/semusi/autoplanbench/data/blocksworld/translation_examples.json",
+            "temp": 0,
+            "max_tokens": 256,
+            "max_history": 0,
+            "caching": "default"
+        }
+    },
+    "task_nums": [
+        18,
+        6,
+        9,
+        20,
+        3,
+        8,
+        5,
+        21,
+        2,
+        13,
+        7,
+        17,
+        12,
+        10,
+        15,
+        16,
+        11,
+        14,
+        4,
+        19
+    ],
+    "domain_dir": "/home/arunim/Desktop/semusi/autoplanbench/data/blocksworld",
+    "domain_file": "/home/arunim/Desktop/semusi/autoplanbench/data/blocksworld/domain.pddl",
+    "domain_nl_file": "/home/arunim/Desktop/semusi/autoplanbench/data/blocksworld/domain_description.json",
+    "instance_dir": "/home/arunim/Desktop/semusi/autoplanbench/data/blocksworld/adapted_instances",
+    "planning_approach": "cot",
+    "encoding_type": "automatic",
+    "translation_neural": true,
+    "incremental": false,
+    "thoughts": true,
+    "positive_feedback": "full",
+    "negative_feedback": "full",
+    "subgoal_feedback": false,
+    "provide_state": false,
+    "not_finished_feedback": true,
+    "log_history": false,
+    "run_config": {
+        "steps": 1,
+        "break_limit": 1,
+        "break_limit_reached_goal": null,
+        "directory": "blocksworld_cot_1_shot"
+    }
+}

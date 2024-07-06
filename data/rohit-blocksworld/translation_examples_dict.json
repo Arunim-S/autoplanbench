@@ -1,0 +1,33 @@
+{
+    "prefixes": {
+        "input": "Input:",
+        "output": "Output:"
+    },
+    "example_objs": [
+        "object_50: o",
+        "star_23: b",
+        "kumquat_8: c_8",
+        "screen: abc",
+        "teddy: td",
+        "roof_11: r_11",
+        "socket: z",
+        "rain: rn",
+        "object_26: o2",
+        "kumquat: k",
+        "fire: f"
+    ],
+    "pos_examples": [
+        [
+            "Now, sing while holding block kumquat.",
+            "[1] (sing kumquat) [2] (sing k)"
+        ],
+        [
+            "Once your done, please pick up block screen from block kumquat_8 with the robot hand.",
+            "[1] (rama screen kumquat_8) [2] (rama abc c_8)"
+        ],
+        [
+            "First, dance with block kumquat that is on the table and then jump with block kumquat onto block yew.",
+            "[1] (dance kumquat) [2] (dance k)\n[1] (jump kumquat yew) [2] (jump k yew)"
+        ]
+    ]
+}

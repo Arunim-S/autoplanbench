@@ -1,0 +1,28 @@
+{
+    "data_to_eval": [
+        {
+            "generated_plans_path": "/home/arunim/Desktop/semusi/autoplanbench/output_files/blocksworld_basic_1_shot",
+            "evaluation_results_file": "/home/arunim/Desktop/semusi/autoplanbench/evaluation_results/blocksworld_basic_1_shot.csv",
+            "gold_plan_dir": "/home/arunim/Desktop/semusi/autoplanbench/data/blocksworld/gold_plans",
+            "is_complete_plan": true
+        },
+        {
+            "generated_plans_path": "/home/arunim/Desktop/semusi/autoplanbench/output_files/blocksworld_cot_1_shot",
+            "evaluation_results_file": "/home/arunim/Desktop/semusi/autoplanbench/evaluation_results/blocksworld_cot_1_shot.csv",
+            "gold_plan_dir": "/home/arunim/Desktop/semusi/autoplanbench/data/blocksworld/gold_plans",
+            "is_complete_plan": true
+        },
+        {
+            "generated_plans_path": "/home/arunim/Desktop/semusi/autoplanbench/output_files/blocksworld_react_1_shot",
+            "evaluation_results_file": "/home/arunim/Desktop/semusi/autoplanbench/evaluation_results/blocksworld_react_1_shot.csv",
+            "gold_plan_dir": "/home/arunim/Desktop/semusi/autoplanbench/data/blocksworld/gold_plans",
+            "is_complete_plan": false
+        },
+        {
+            "generated_plans_path": "/home/arunim/Desktop/semusi/autoplanbench/output_files/blocksworld_act_1_shot",
+            "evaluation_results_file": "/home/arunim/Desktop/semusi/autoplanbench/evaluation_results/blocksworld_act_1_shot.csv",
+            "gold_plan_dir": "/home/arunim/Desktop/semusi/autoplanbench/data/blocksworld/gold_plans",
+            "is_complete_plan": false
+        }
+    ]
+}

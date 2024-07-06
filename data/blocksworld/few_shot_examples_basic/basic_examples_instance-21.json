@@ -1,0 +1,12 @@
+{
+    "prefixes": {
+        "input": "[STATEMENT]\n",
+        "output": "[PLAN]\n"
+    },
+    "pos_examples": [
+        [
+            "My goal is that in the end object_0 is on object_2, object_1 is on object_3, object_3 is on object_0\nMy current initial situation is as follows: \nThere are 4 objects: object_0, object_1, object_2, object_3\nCurrently, object_0 is on object_2, object_1 is clear, object_1 is on the table, object_2 is on the table, object_3 is clear, object_3 is on object_0, the hand is empty",
+            "pick up object object_1 from the table with an empty hand\nNow, stack object object_1 on object object_3\n[PLAN END]"
+        ]
+    ]
+}

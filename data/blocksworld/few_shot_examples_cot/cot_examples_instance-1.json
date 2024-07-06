@@ -1,0 +1,12 @@
+{
+    "prefixes": {
+        "input": "[STATEMENT]",
+        "output": "[PLAN]"
+    },
+    "pos_examples": [
+        [
+            "My goal is that in the end object_2 is on object_1\nMy current initial situation is as follows: \nThere are 4 objects: object_0, object_1, object_2, object_3\nCurrently, object_0 is clear, object_0 is on the table, object_1 is clear, object_1 is on object_2, object_2 is on the table, object_3 is clear, object_3 is on the table, the hand is empty\nLet's think step by step",
+            "Think: Object_1 is not clear because it is on object_2, and I need object_1 to be clear to stack object_2 on it. I must unstack object_1 from object_2 first.\nInstruction: unstack object object_1 from object object_2\nThink: Now that object_1 has been unstacked, I need to put it down to free my hand so I can pick up object_2.\nInstruction: put down object object_1\nThink: With object_1 on the table and my hand empty, I can now pick up object_2 since it is clear and on the table.\nInstruction: pick up object object_2 from the table with an empty hand\nThink: Now that object_2 is being held, I can stack it on object_1, which is clear and on the table, to achieve the goal of object_2 being on object_1.\nInstruction: stack object object_2 on object object_1\nThink: object_2 is on object_1\nInstruction: You are finished.\n[PLAN END]"
+        ]
+    ]
+}
